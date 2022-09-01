@@ -162,6 +162,8 @@ header span {
 @media (max-width: 480px) {
     body {
         background-image: url('../assets/img/pexels-lucas-pezeta-3772353.jpg');
+        background-size: cover;
+        background-position: center;
         /* Foto de Lucas Pezeta: https://www.pexels.com/es-es/foto/misterioso-carril-espeluznante-en-bosque-oscuro-3772353/ */
     }
 
