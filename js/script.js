@@ -97,6 +97,7 @@ function setDom(result, daily) {
     2
   )} km/h</p>`;
   let nextdays = document.querySelector(".weather_next");
+  nextdays.textContent = '';
   daily.forEach((day) => {
     let miliseconds = day.dt + "000";
     let article = document.createElement("article");
