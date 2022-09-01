@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <input type="text" name="city" id="city" class="city" />
+      <span class="submit" id="submit"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-search"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg
+      ></span>
+    </header>
+    <main class="weather">
+      <section class="weather_actual">
+        <article class="weather_actual-information">
+          <p class="weather_actual-description"></p>
+          <p class="weather_actual-city"></p>
+          <p class="weather_actual-date"></p>
+          <div class="weather_actual-temp"></div>
+          <p class="weather_actual-temp-minmax"></p>
+        </article>
+        <article class="weather_actual-moreinfo">
+          <div class="weather_actual-feels-like"></div>
+          <div class="weather_actual-humidity"></div>
+          <div class="weather_actual-wind-speed"></div>
+        </article>
+      </section>
+      <section class="weather_next">
+
+        
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

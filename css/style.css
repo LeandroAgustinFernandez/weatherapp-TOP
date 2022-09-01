@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    color: rgb(250, 249, 249);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../assets/img/pexels-sami-anas-5641977\ \(1\).jpg');
+    /* Foto de Sami Anas: https://www.pexels.com/es-es/foto/cordillera-de-alta-montana-nevada-bajo-las-nubes-5641977/ */
+}
+
+
+header {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+header,
+.weather {
+    padding: 3rem 15rem;
+}
+
+header input {
+    border: none;
+    border-bottom: 3px solid white;
+    background-color: transparent;
+    font-size: 2rem;
+    color: white;
+    padding-bottom: 2px;
+}
+
+header input:focus-visible {
+    outline: 0px;
+}
+
+header span {
+    cursor: pointer;
+}
+
+.weather {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+}
+
+.weather_actual {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.weather_actual-description {
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+.weather_actual-city {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+.weather_actual-date {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.weather_actual-temp {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.weather_actual-temp-minmax {
+    font-size: 1.5rem;
+}
+
+.weather_actual-moreinfo {
+    display: flex;
+    gap:2rem;
+    margin-top: 2rem;
+}
+
+.weather_actual-moreinfo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weather_actual-moreinfo .title {
+    font-size: 1.8rem;
+}
+
+.weather_actual-moreinfo .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.weather_next {
+    padding-top: 5rem;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather_next-day-name {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.weather_next-day-tempmax {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: .5rem;
+}
+.weather_next-day-tempmin {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    header,
+    .weather {
+        padding: 3rem
+    }
+}
+
+@media (max-width: 768px) {
+    .weather {    
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .weather_actual {
+        grid-column: 1/2;
+        
+    }
+    .weather_next {        
+        grid-column: 2/3;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: end;
+        padding: 2rem 4rem;
+        gap: 1rem;
+    }
+
+    .weather_next-day-name {
+        margin-bottom: .5rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    body {
+        background-image: url('../assets/img/pexels-lucas-pezeta-3772353.jpg');
+        /* Foto de Lucas Pezeta: https://www.pexels.com/es-es/foto/misterioso-carril-espeluznante-en-bosque-oscuro-3772353/ */
+    }
+
+    header,
+    .weather {
+        padding: 1rem;
+    }
+    
+    .weather {    
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr; 
+    }
+    
+    .weather_actual {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .weather_actual-temp{
+        justify-content: center;
+    }
+    
+    .weather_actual-description {
+        font-size: 4rem;
+        font-weight: 800;
+    }
+
+    .weather_actual-moreinfo {
+        flex-direction: column;
+        align-content:flex-end ;
+    }
+
+    .weather_next {        
+        grid-column: 1/2;
+        grid-row: 2/3;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        padding-top: 3rem;
+        gap: 1rem;
+    }
+
+    .weather_next-day-name {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .weather_next-information{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .weather_next-day-tempmin{
+        font-size: 2rem;
+        font-weight: 800;
+        margin-left: 2rem;
+    }
+}
