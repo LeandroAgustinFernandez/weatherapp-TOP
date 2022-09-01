@@ -45,8 +45,6 @@ async function getWeather30Days(data) {
   return weather;
 }
 
-// https://api.openweathermap.org/data/2.5/onecall?lat=${e.lat}&lon=${e.lon}&exclude=minutely,alerts&units=${t}&appid=20f7632ffc2c022654e4093c6947b4f4
-
 async function getInfo(city) {
   const result = {};
   let weather = await getWeatherTime(city);
@@ -70,7 +68,6 @@ async function getInfo(city) {
 }
 
 function setDom(result, daily) {
-  console.log(result);
   document.querySelector(".weather_actual-description").textContent =
     result.description;
   document.querySelector(".weather_actual-city").textContent = result.city;
@@ -97,7 +94,7 @@ function setDom(result, daily) {
     2
   )} km/h</p>`;
   let nextdays = document.querySelector(".weather_next");
-  nextdays.textContent = '';
+  nextdays.textContent = "";
   daily.forEach((day) => {
     let miliseconds = day.dt + "000";
     let article = document.createElement("article");
